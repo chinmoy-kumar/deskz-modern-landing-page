@@ -11,15 +11,15 @@
   </head>
   <body>
     <!-- Nav Bar -->
-    <nav class="flex justify-between items-center px-5 py-5">
-      <div id="navLogo" class="flex gap-5">
+    <nav class="flex justify-between items-center px-5 py-5 shadow-md relative z-50">
+      <div id="navLogo" class="flex flex-1 gap-5">
         <img class="max-h-30 max-w-15" src="../assets/logo.png" alt="logo" />
         <span class="font-primary font-bold text-xl">Deskz</span>
       </div>
       <div class="lg:hidden" onclick="menuHandle()">
         <i class="fa-solid fa-bars"></i>
       </div>
-
+      <!-- Menu list -->
       <div id="menuList" class="hidden lg:flex">
         <ul class="flex gap-10 text-xl">
           <li><a class="hover:text-primary transition duration-150 hover:scale-105 inline-block" href="#">Home</a></li>
@@ -29,12 +29,15 @@
           <li><a class="hover:text-primary transition duration-150 hover:scale-105 inline-block" href="#">Contact Us</a></li>
         </ul>
       </div>
-      <button
-        class="hidden lg:block border border-gray-300 hover:border-gray-900 px-5 py-3 rounded-lg cursor-pointer transition"
+      <!-- Login button -->
+       <div class="hidden lg:flex flex-1 justify-end">
+        <button
+        class="border border-gray-300 hover:border-gray-900 px-5 py-3 rounded-lg cursor-pointer transition"
       >
         <a href="#" class="">Log in</a>
         <i class="fa-solid fa-right-to-bracket"></i>
       </button>
+       </div>
 
       <!-- mobile menu -->
       <!-- inset-0 takes the full screen -->
@@ -73,14 +76,37 @@
       </div>
     </nav>
     <main>
-      <div id="main" class="min-h-screen bg-linear-to-br from-purple-50 via-orange-50 to-transparent">
-        <div id="mainContainer" class="max-w-4xl bg-gray-700 mx-auto px-6 pb-32 flex flex-col">
-          <div id="versionBox" class="flex items-center gap-2 bg-amber-50 w-fit rounded-lg px-6 py-1 mt-6 border border-amber-600 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition duration-300 group">
+      <div id="main" class="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent">
+        <div id="mainContainer" class="max-w-4xl sm:max-w-3xl mx-auto px-6 pb-32 flex flex-col sm:items-center sm:text-center">
+          <!-- version box -->
+          <div id="versionBox" class="flex items-center gap-2 bg-amber-50 w-fit rounded-lg px-6 py-1 mt-12 sm:mt-16 border border-amber-600 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition duration-300 group">
             <div class="h-2 w-2 bg-amber-400 rounded-full border border-amber-700"></div>
             <p class="text-amber-500">v0.31.2: <span class="text-amber-600">Find-in-page bug fixes</span></p>
             <i class="fa fa-arrow-right text-amber-500 group-hover:translate-x-1 transform duration-200" aria-hidden="true"></i>
           </div>
 
+          <div class="hidden sm:flex justify-center items-center gap-4 mt-16 text-gray-500">
+            <div class="flex justify-center items-center gap-2">
+              <i class="fa-regular fa-file-code"></i>
+              <P>Code Optional</P>
+            </div>
+            <div class="flex justify-center items-center gap-2">
+              <i class="fa-solid fa-hand-back-fist"></i>
+              <P>Drag & drop builder</P>
+            </div>
+            <div class="flex justify-center items-center gap-2">
+              <i class="fa-solid fa-laptop"></i>
+              <P>Windows, Mac, Linux</P>
+            </div>
+          </div>
+
+          <h1 class="text-4xl mt-12 sm:text-7xl sm:leading-tight">Web app to desktop app in minutes</h1>
+          <p class="text-xl sm:text-2xl mt-4 sm:mt-6 text-gray-800 ">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
+
+          <div id="buttonContainer" class="mt-12 flex gap-4 flex-col sm:flex-row">
+            <button class="bg-primary py-3 px-6 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#5800f4]">Download Now</button>
+            <button class="flex gap-6 flex-col bg-white py-3 px-6 font-semibold rounded-xl border border-gray-400 cursor-pointer hover:border-gray-700">Read Docs</button>
+          </div>
         </div>
       </div>
     </main>
